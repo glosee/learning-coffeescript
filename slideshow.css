@@ -7,6 +7,9 @@ body {
 .slideshow {
   list-style-type: none;
   position: relative;
+  height: 150px;
+  padding: 10px 0;
+  background: #eee;
 }
 
 li {
@@ -14,11 +17,11 @@ li {
   display: block;
   box-sizing: border-box;
   padding: 20px;
-  background: maroon;
+  background: lightseagreen;
   color: #eaeaea;
   position: absolute;
 }
 
 li:nth-child(even) {
-  background: red;
+  background: lightcoral;
 }

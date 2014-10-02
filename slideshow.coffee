@@ -27,6 +27,8 @@ rotator = (slideshow) ->
 
   doRotation = ->
 
+    # console.log 'tick'
+
     # which panel to show next
     next = (active + direction + $panels.length) % $panels.length
 
@@ -49,7 +51,29 @@ rotator = (slideshow) ->
     # the 'next' panel is now active
     active = next
 
-  window.setInterval(doRotation, duration)
+  #window.setInterval(doRotation, duration)
+
+  # create a button to control the slideshow and add it to the stage
+  control = $('<button></button>').insertAfter(slideshow)
+  timer = null
+
+  # call this to start the slideshow
+  doStart = ->
+    timer = window.setInterval(doRotation, duration)
+    control.text('pause')
+
+  # call this to stop the slideshow
+  doStop = ->
+    window.clearInterval timer
+    timer = null
+    control.text('play')
+
+  # listen to clicks on the control button and play or pause the slideshow
+  $(control).click ->
+    if timer then doStop()
+    else doStart()
+
+  doStart() # let's start the show
 
 # jQuery ready
 $ -> rotator(slideshow) for slideshow in $.find('.slideshow')

@@ -1,0 +1,24 @@
+body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  position: relative;
+}
+
+li {
+  width: 400px;
+  display: block;
+  box-sizing: border-box;
+  padding: 20px;
+  background: maroon;
+  color: #eaeaea;
+  position: absolute;
+}
+
+li:nth-child(even) {
+  background: red;
+}

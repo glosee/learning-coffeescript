@@ -69,9 +69,17 @@ rotator = (slideshow) ->
     control.text('play')
 
   # listen to clicks on the control button and play or pause the slideshow
-  $(control).click ->
+  $(control).on 'click' ->
     if timer then doStop()
     else doStart()
+
+  # listen for custom events on the body for starting and stopping multiple
+  # slideshows with multiple triggers
+  $(body).on 'slideshow.stop', ->
+    doStop()
+
+  $(body).on 'slideshow.start', ->
+    doStart()
 
   doStart() # let's start the show
 

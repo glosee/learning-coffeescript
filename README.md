@@ -6,4 +6,4 @@ To start off, I am working through [Smashing CoffeeScript](http://ca.wiley.com/W
 
 ## About Gulp setup
 
-I wanted to automate cofeescript compilation while working through this, and I wanted to try out Gulp. How better to achieve both these things than to Google "setting up gulp and coffeescript". I stumbled upon [this article](http://vincent.is/introducing-people-to-gulp/), which taught me that your gulpfile can be written in coffeescript too! I mostly copied but also modified the script from the aforementioned article, so thank you to @Keats for the awesome tutorial.
+I wanted to automate cofeescript compilation while working through this, and I wanted to try out Gulp. How better to achieve both these things than to Google "setting up gulp and coffeescript". I stumbled upon [this article](http://vincent.is/introducing-people-to-gulp/), which taught me that your gulpfile can be written in coffeescript too! I mostly copied but also modified the script from the aforementioned article, so thank you to [@keats](https://github.com/keats) for the awesome tutorial.
